@@ -30,3 +30,8 @@ if __name__ == "__main__":
     ticker = input("Enter stock ticker: ").upper()
     df = fetch_data(ticker)
     save_data(df, ticker)
+
+
+    for ticker in TICKER:
+        data = fetch_data(ticker)
+        save_data(data, ticker)
