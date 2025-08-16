@@ -27,11 +27,7 @@ def save_data(data, ticker):
     print(f"Data saved to {file_path}")
 
 if __name__ == "__main__":
-    ticker = input("Enter stock ticker: ").upper()
-    df = fetch_data(ticker)
-    save_data(df, ticker)
-
-
-    for ticker in TICKER:
+    TICKERS = ["TSLA", "SPY", "BABA"]
+    for ticker in TICKERS:
         data = fetch_data(ticker)
         save_data(data, ticker)
